@@ -9,6 +9,7 @@ const app = express();
 app.use(bodyParser.json({ limit: '5mb' }));
 app.use(cookieParser());
 app.use(session({
+    resave: false,
     saveUninitialized: false,
     rolling: true,
     secret: process.env.SESSION_SECRET
