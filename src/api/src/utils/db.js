@@ -8,6 +8,7 @@ const db = mysql.createConnection({
 })
 
 db.on("connect", () => {
+    db.query("USE dnd_en;")
     console.log("DB successfuly connected.");
 })
 
